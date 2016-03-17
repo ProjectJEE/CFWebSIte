@@ -1,0 +1,68 @@
+.pretty-title {
+	font-family: 'fgr';
+	text-shadow: 2px 2px black;
+}
+
+.pretty-button {
+	background-color: transparent;
+	border-color: white;
+	width: 20%;
+	font-weight: bold;
+	margin-top: 2%;
+}
+
+a.pretty-button:hover {
+	background-color: transparent;
+	border-color: white;
+	text-shadow: 1px 1px black;
+}
+
+.lead {
+	font-style: italic;
+}
+
+.feedback-box {
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px black;
+	color: black;
+	font-style: italic;
+	font-weight: lighter;
+	padding: 5%;
+	text-align: left;
+}
+
+.some-space {
+	margin-top: 3%;
+}
+
+.user-name {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.user-age {
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 0.7em;
+}
+
+.customNavigation {
+	margin-top: 2%;
+}
+
+.customNavigation>.btn.btn-primary.next {
+	background-color: transparent;
+	border-color: white;
+}
+
+.customNavigation>.btn.btn-primary.prev {
+	background-color: transparent;
+	border-color: white;
+}
+
+.thumbnail>img {
+	/* 	display: block; */
+	height: 50%;
+	width: 50%;
+}

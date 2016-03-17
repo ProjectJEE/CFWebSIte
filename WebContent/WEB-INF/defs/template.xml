@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="general" template="/WEB-INF/defs/classic.jsp">
+		<put-attribute name="title" value="BulbCrowding" />
+		<put-attribute name="header" value="/WEB-INF/views/layouts/banner.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+		<put-attribute name="maker.1" value="ROUINEB Hamza"
+			cascade="true" />
+		<put-attribute name="maker.2" value="NAJI Ibtissam"
+			cascade="true" />
+		<put-attribute name="maker.3" value="AMZIL Fatima"
+			cascade="true" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="css/bootstrap.min.css" />
+			<add-attribute value="css/styles.css" />
+			<add-attribute value="css/font-awesome.min.css" />
+
+		</put-list-attribute>
+		<put-list-attribute name="scripts">
+			<add-attribute value="js/jquery-2.2.1.min.js" />
+			<add-attribute value="js/bootstrap.min.js" />
+			<!-- <add-attribute value="js/npm.js" /> -->
+			<add-attribute value="js/scripts.js" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="index" extends="general">
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="css/owl.theme.default.css" />
+			<add-attribute value="css/owl.carousel.min.css" />
+			<add-attribute value="css/custom.css" />
+			<add-attribute value="css/animate.css" />
+		</put-list-attribute>
+		<put-list-attribute name="scripts" inherit="true">
+			<add-attribute value="js/owl.carousel.min.js" />
+			<add-attribute value="js/custom.js" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="signup" extends="general">
+		<put-attribute name="body" value="/WEB-INF/views/user/signup.jsp" />
+	</definition>
+
+</tiles-definitions>
