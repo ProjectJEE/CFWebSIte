@@ -1,4 +1,4 @@
-package ma.lhope.models;
+package entities;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,19 +7,22 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
 
 public class Project implements Serializable {
 
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Participate.class, mappedBy = "project")
+	@OneToMany(cascade = {
+			CascadeType.ALL }, targetEntity = Participate.class, mappedBy = "project", fetch = FetchType.EAGER)
 	private List<Participate> participations;
 
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Comment.class, mappedBy = "project")
+	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Comment.class, mappedBy = "project", fetch = FetchType.EAGER)
 	private List<Comment> comments;
 
 	@Basic
@@ -34,7 +37,7 @@ public class Project implements Serializable {
 	@Basic
 	private String description_project;
 
-	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Vote.class, mappedBy = "project")
+	@OneToMany(cascade = { CascadeType.ALL }, targetEntity = Vote.class, mappedBy = "project", fetch = FetchType.EAGER)
 	private List<Vote> votes;
 
 	@Basic
@@ -43,10 +46,13 @@ public class Project implements Serializable {
 	@Column(unique = true)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private double id_project;
+	private long id_project;
 
 	@Basic
 	private long money_goal;
+
+	@ManyToOne(cascade = { CascadeType.MERGE }, targetEntity = User.class)
+	private User user;
 
 	public Project() {
 
@@ -120,7 +126,7 @@ public class Project implements Serializable {
 		return this.id_project;
 	}
 
-	public void setId_project(double id_project) {
+	public void setId_project(long id_project) {
 		this.id_project = id_project;
 	}
 
@@ -131,4 +137,13 @@ public class Project implements Serializable {
 	public void setMoney_goal(long money_goal) {
 		this.money_goal = money_goal;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 }

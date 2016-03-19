@@ -27,9 +27,21 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
-//	public void update(User entity) {
-//
-//	}
+	public void update(User entity) {
+		Session s = HibernateUtils.getSessionFactory().openSession();
+		Transaction tx = s.beginTransaction();
+		try {
+			s.update(entity);
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+		}finally {
+			s.close();
+		}
+		
+	}
+	
+	
 	public void delete(User entity) {
 		Session s = HibernateUtils.getSessionFactory().openSession();
 		Transaction tx = s.beginTransaction();

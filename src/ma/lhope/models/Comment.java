@@ -1,4 +1,5 @@
-package ma.lhope.models;
+package entities;
+
 
 import java.io.Serializable;
 
@@ -15,53 +16,58 @@ import javax.persistence.ManyToOne;
 
 public class Comment implements Serializable {
 
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Basic
-	private String description_comment;
+    private String description_comment;
 
-	@ManyToOne(cascade = { CascadeType.MERGE }, targetEntity = Project.class)
-	private Project project;
+    @ManyToOne(cascade = {CascadeType.MERGE}, targetEntity = Project.class)
+    private Project project;
 
-	@Column(unique = true)
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_comment;
+    @Column(unique = true)
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id_comment;
 
-	@ManyToOne(cascade = { CascadeType.MERGE }, targetEntity = User.class)
-	private User user;
+    @ManyToOne(cascade = {CascadeType.MERGE}, targetEntity = User.class)
+    private User user;
 
-	public Comment() {
+    public Comment() {
 
-	}
+    }
 
-	public String getDescription_comment() {
-		return this.description_comment;
-	}
+    public String getDescription_comment() {
+        return this.description_comment;
+    }
 
-	public void setDescription_comment(String description_comment) {
-		this.description_comment = description_comment;
-	}
+    public void setDescription_comment(String description_comment) {
+        this.description_comment = description_comment;
+    }
 
-	public Project getProject() {
-		return this.project;
-	}
+    public Project getProject() {
+        return this.project;
+    }
 
-	public void setProject(Project project) {
-		this.project = project;
-	}
+    public void setProject(Project project) {
+        this.project = project;
+    }
 
-	public Long getId_comment() {
-		return this.id_comment;
-	}
+    public Long getId_comment() {
+        return this.id_comment;
+    }
 
-	public void setId_comment(Long id_comment) {
-		this.id_comment = id_comment;
-	}
+    public void setId_comment(Long id_comment) {
+        this.id_comment = id_comment;
+    }
 
-	public User getUser() {
-		return this.user;
-	}
+    public User getUser() {
+        return this.user;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
