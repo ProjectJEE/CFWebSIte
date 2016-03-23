@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: 'abi';
+	src: url('../../fonts/Alegreya/Alegreya-BoldItalic.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'pacifico';
+	src: url('../../fonts/Pacifico/Pacifico.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'fgr';
+	src:
+		url('../../fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf')
+		format('truetype');
+}
+
+@font-face {
+	font-family: 'graffiti';
+	src:
+		url('../../fonts/Calligraffitti/Calligraffitti-Regular.ttf')
+		format('truetype');
+}
