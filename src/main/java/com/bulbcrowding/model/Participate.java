@@ -15,6 +15,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Participate implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Basic
 	private long amount_participation;
 

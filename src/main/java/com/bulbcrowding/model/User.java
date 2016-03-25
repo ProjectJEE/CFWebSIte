@@ -15,8 +15,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Entity
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 
+@Entity
+@Scope(value="session", proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class User implements Serializable {
 
 	/**
@@ -35,6 +40,7 @@ public class User implements Serializable {
 
 	@OneToMany(cascade = {
 			CascadeType.ALL }, targetEntity = Participate.class, mappedBy = "user", fetch = FetchType.EAGER)
+	@Fetch(value = FetchMode.SUBSELECT)
 	private List<Participate> participations = new ArrayList<>();
 
 	@Basic

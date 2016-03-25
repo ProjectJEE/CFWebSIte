@@ -5,8 +5,6 @@
 <tiles-definitions>
 	<definition name="general" template="/WEB-INF/defs/classic.jsp">
 		<put-attribute name="title" value="BulbCrowding" />
-		<put-attribute name="header" value="/WEB-INF/views/layouts/banner.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
 		<put-attribute name="maker.1" value="ROUINEB Hamza"
 			cascade="true" />
 		<put-attribute name="maker.2" value="NAJI Ibtissam"
@@ -14,53 +12,20 @@
 		<put-attribute name="maker.3" value="AMZIL Fatima"
 			cascade="true" />
 		<put-list-attribute name="stylesheets">
-			<add-attribute value="css/bootstrap.min.css" />
-			<add-attribute value="css/styles.css" />
-			<add-attribute value="css/font-awesome.min.css" />
-		</put-list-attribute>
-		<put-list-attribute name="scripts">
-			<add-attribute value="js/jquery-2.2.1.min.js" />
-			<add-attribute value="js/bootstrap.min.js" />
-		</put-list-attribute>
-	</definition>
-
-	<definition name="index" extends="general">
-		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
-		<put-list-attribute name="stylesheets" inherit="true">
-			<add-attribute value="css/owl.theme.default.css" />
-			<add-attribute value="css/owl.carousel.min.css" />
-			<add-attribute value="css/custom.css" />
-			<add-attribute value="css/formValidator/formValidation.min.css" />
-		</put-list-attribute>
-		<put-list-attribute name="scripts" inherit="true">
-			<add-attribute value="js/scripts.js" />
-			<add-attribute value="js/owl.carousel.min.js" />
-			<add-attribute value="js/custom.js" />
-			<add-attribute value="js/formValidator/formValidation.min.js" />
-			<add-attribute value="js/formValidator/bootstrap.min.js" />
-		</put-list-attribute>
-	</definition>
-
-	<definition name="home" template="/WEB-INF/views/user/home.jsp">
-		<put-attribute name="header" value="" />
-		<put-attribute name="body" value="/WEB-INF/views/user/home.jsp" />
-		<put-attribute name="footer" value="" />
-		<put-list-attribute name="stylesheets">
 			<add-attribute value="css/font-awesome.min.css" />
 			<add-attribute value="css/elite_css/animate.css" />
-			<add-attribute value="css/elite_css/custom.css" />
 			<add-attribute value="css/elite_css/icomoon.css" />
 			<add-attribute value="css/elite_css/simple-line-icons.css" />
 			<add-attribute value="css/elite_css/magnific-popup.css" />
-			<add-attribute value="css/elite_css/bootstrap.css" />
+			<add-attribute value="css/bootstrap.min.css" />
 			<add-attribute value="css/owl.theme.default.css" />
 			<add-attribute value="css/formValidator/formValidation.min.css" />
 			<add-attribute
 				value="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" />
 		</put-list-attribute>
 		<put-list-attribute name="scripts">
-			<add-attribute value="js/elite_js/jquery.min.js" />
-			<add-attribute value="js/elite_js/bootstrap.min.js" />
+			<add-attribute value="js/jquery-1.12.2.min.js" />
+			<add-attribute value="js/bootstrap.min.js" />
 			<add-attribute value="js/elite_js/jquery.waypoints.min.js" />
 			<add-attribute value="js/elite_js/jquery.stellar.min.js" />
 			<add-attribute value="js/elite_js/jquery.stellar.min.js" />
@@ -74,6 +39,110 @@
 		</put-list-attribute>
 	</definition>
 
+	<!-- <definition name="index_old" extends="general"> -->
+	<!-- <put-attribute name="body" value="/WEB-INF/views/index_old.jsp" /> -->
+	<!-- <put-list-attribute name="stylesheets" inherit="true"> -->
+	<!-- <add-attribute value="css/owl.theme.default.css" /> -->
+	<!-- <add-attribute value="css/owl.carousel.min.css" /> -->
+	<!-- <add-attribute value="css/custom.css" /> -->
+	<!-- <add-attribute value="css/formValidator/formValidation.min.css" /> -->
+	<!-- </put-list-attribute> -->
+	<!-- <put-list-attribute name="scripts" inherit="true"> -->
+	<!-- <add-attribute value="js/scripts.js" /> -->
+	<!-- <add-attribute value="js/owl.carousel.min.js" /> -->
+	<!-- <add-attribute value="js/custom.js" /> -->
+	<!-- <add-attribute value="js/formValidator/formValidation.min.js" /> -->
+	<!-- <add-attribute value="js/formValidator/bootstrap.min.js" /> -->
+	<!-- </put-list-attribute> -->
+	<!-- </definition> -->
+
+	<definition name="index" template="/WEB-INF/views/index.jsp">
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/user/home.jsp" />
+		<put-attribute name="footer" value="" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="css/font-awesome.min.css" />
+			<add-attribute value="css/elite_css/animate.css" />
+			<add-attribute value="css/elite_css/custom.css" />
+			<add-attribute value="css/elite_css/icomoon.css" />
+			<add-attribute value="css/elite_css/simple-line-icons.css" />
+			<add-attribute value="css/elite_css/magnific-popup.css" />
+			<add-attribute value="css/bootstrap.min.css" />
+			<add-attribute value="css/owl.theme.default.css" />
+			<add-attribute value="css/formValidator/formValidation.min.css" />
+			<add-attribute
+				value="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" />
+		</put-list-attribute>
+		<put-list-attribute name="scripts">
+			<add-attribute value="js/jquery-1.12.2.min.js" />
+			<add-attribute value="js/bootstrap.min.js" />
+			<add-attribute value="js/elite_js/jquery.waypoints.min.js" />
+			<add-attribute value="js/elite_js/jquery.stellar.min.js" />
+			<add-attribute value="js/elite_js/jquery.stellar.min.js" />
+			<add-attribute value="js/elite_js/jquery.countTo.js" />
+			<add-attribute value="js/elite_js/jquery.magnific-popup.min.js" />
+			<add-attribute value="js/elite_js/magnific-popup-options.js" />
+			<add-attribute value="js/elite_js/jquery.style.switcher.js" />
+			<add-attribute value="js/elite_js/main.js" />
+			<add-attribute value="js/elite_js/custom.js" />
+			<add-attribute value="js/formValidator/formValidation.min.js" />
+			<add-attribute value="js/formValidator/bootstrap.min.js" />
+		</put-list-attribute>
+	</definition>
+	<definition name="home" extends="general">
+		<put-attribute name="header" value="/WEB-INF/views/user/banner.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/user/home.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/user/footer.jsp" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="css/elite_css/custom.css" />
+			<add-attribute value="css/custom_user.css" />
+		</put-list-attribute>
+		<put-list-attribute name="scripts" inherit="true">
+			<add-attribute value="js/home_user.js" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="project" template="/WEB-INF/defs/home.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/user/banner.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/user/project.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/user/footer.jsp" />
+		<!-- <put-list-attribute name="stylesheets"> -->
+		<!-- <add-attribute value="css/font-awesome.min.css" /> -->
+		<!-- <add-attribute value="css/elite_css/animate.css" /> -->
+		<!-- <add-attribute value="css/elite_css/custom.css" /> -->
+		<!-- <add-attribute value="css/elite_css/icomoon.css" /> -->
+		<!-- <add-attribute value="css/elite_css/simple-line-icons.css" /> -->
+		<!-- <add-attribute value="css/elite_css/magnific-popup.css" /> -->
+		<!-- <add-attribute value="css/bootstrap.min.css" /> -->
+		<!-- <add-attribute value="css/owl.theme.default.css" /> -->
+		<!-- <add-attribute value="css/formValidator/formValidation.min.css" /> -->
+		<!-- <add-attribute value="css/elite_css/custom.css" /> -->
+		<!-- <add-attribute value="css/custom_user.css" /> -->
+		<!-- </put-list-attribute> -->
+		<!-- <put-list-attribute name="scripts"> -->
+		<!-- <add-attribute value="js/jquery-1.12.2.min.js" /> -->
+		<!-- <add-attribute value="js/bootstrap.min.js" /> -->
+		<!-- <add-attribute value="js/elite_js/jquery.waypoints.min.js" /> -->
+		<!-- <add-attribute value="js/elite_js/jquery.stellar.min.js" /> -->
+		<!-- <add-attribute value="js/elite_js/jquery.stellar.min.js" /> -->
+		<!-- <add-attribute value="js/elite_js/jquery.countTo.js" /> -->
+		<!-- <add-attribute value="js/elite_js/jquery.magnific-popup.min.js" /> -->
+		<!-- <add-attribute value="js/elite_js/magnific-popup-options.js" /> -->
+		<!-- <add-attribute value="js/elite_js/jquery.style.switcher.js" /> -->
+		<!-- <add-attribute value="js/elite_js/main.js" /> -->
+		<!-- <add-attribute value="js/elite_js/custom.js" /> -->
+		<!-- <add-attribute value="js/formValidator/formValidation.min.js" /> -->
+		<!-- <add-attribute value="js/formValidator/bootstrap.min.js" /> -->
+		<!-- <add-attribute value="js/home_user.js" /> -->
+		<!-- </put-list-attribute> -->
+	</definition>
+
+
+	<definition name="test" extends="general">
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/user/test.jsp" />
+		<put-attribute name="footer" value="" />
+	</definition>
 
 
 </tiles-definitions>

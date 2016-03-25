@@ -15,12 +15,11 @@
 			<property name="connection.url">jdbc:hsqldb:hsql://localhost/TestDB</property> -->
 
 		<!-- <property name="connection.driver_class">com.mysql.jdbc.Driver</property> -->
-		<!-- <property name="connection.url">jdbc:mysql://localhost/bulbcrowding</property> -->
+		<!-- <property name="connection.url">jdbc:mysql://localhost/bulbfunding</property> -->
 		<!-- <property name="connection.username">root</property> -->
 		<!-- <property name="connection.password">1991</property> -->
 
 		<!-- <property name="hibernate.hbm2ddl.auto">create-drop</property> -->
-
 		<!-- SQL dialect -->
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 

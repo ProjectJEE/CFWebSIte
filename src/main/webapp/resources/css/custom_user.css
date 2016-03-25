@@ -1,0 +1,33 @@
+.btn-mine {
+	margin-top: 8%;
+	background-color: transparent;
+	border-color: white;
+	color: white;
+	background-color: transparent;
+}
+
+.btn.btn-mine:hover, .btn.btn-mine:focus, .btn.btn-mine:active {
+	border-color: white;
+	color: white;
+	background-color: transparent;
+}
+
+.btn-mine:hover {
+	color: white;
+}
+
+.carousel img {
+	min-width: 100%;
+}
+
+h1 {
+	color: white;
+}
+
+.crop {
+	width: 100px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+}
+​

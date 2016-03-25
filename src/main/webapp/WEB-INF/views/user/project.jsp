@@ -1,0 +1,61 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<section id="" data-section="home" data-stellar-background-ratio="0.5">
+	<div class="container-fluid text-wrap" style="padding: 0%;">
+		<div class="container-fluid" style="padding: 0%;">
+			<div id="carousel-example-generic" class="carousel slide"
+				data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="/bulbcrowding/img/hero-watch.jpg" alt="cover">
+						<div class="carousel-caption" style="margin-bottom: 5%;">
+							<h1 style="color: white; font-family: abi">Start your own
+								project</h1>
+							<button class="btn btn-default">create project</button>
+						</div>
+					</div>
+					<div class="item">
+						<img src="/bulbcrowding/img/cubetto-sm.jpg" alt="cover">
+						<div class="carousel-caption" style="margin-bottom: 5%;">
+							<h1 style="color: white; font-family: abi;">Help other
+								projects to start</h1>
+							<button class="btn btn-default">view projects</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic"
+					role="button" data-slide="prev"> <span
+					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#carousel-example-generic"
+					role="button" data-slide="next"> <span
+					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+		<div class="container" style="margin-top: 3%; margin-bottom: 5%;">
+			<div class="col-md-8 ">
+				<img src="/bulbcrowding/img/project.jpg"></img>
+			</div>
+			<div class="col-md-4 ">
+				<div class="row">Price : ${project.money_goal} £</div>
+				<div class="row" style="margin-top: 5%;">Number days :
+					${project.nbr_days}</div>
+				<div class="row" style="margin-top: 5%;">Category :
+					${project.category_project}</div>
+			</div>
+			<div class="row" style="margin-top: 5%;">${project.description_project}</div>
+		</div>
+
+	</div>
+</section>

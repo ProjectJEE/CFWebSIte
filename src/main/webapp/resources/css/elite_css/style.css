@@ -1151,11 +1151,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 20px;
 }
 
+/* will control what bootstrap inputs will look like */
 .form-control {
 	box-shadow: none;
 	background: transparent;
 	border: 2px solid rgba(0, 0, 0, 0.1);
-	height: 54px;
 	font-size: 18px;
 	font-weight: 400;
 }

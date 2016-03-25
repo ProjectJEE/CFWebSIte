@@ -1,5 +1,7 @@
 package com.bulbcrowding.dao;
 
+import java.util.List;
+
 import com.bulbcrowding.model.User;
 
 public interface UserDao {
@@ -13,5 +15,9 @@ public interface UserDao {
 	public User getUserById(long id);
 
 	public User getUserByName(String name);
+
+	public User getUserByEmail(String email);
+
+	public List<User> getAllUsers();
 
 }

@@ -36,6 +36,7 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
+	@Override
 	public void update(User entity) {
 		// Session s = HibernateUtils.getSessionFactory().openSession();
 		Session s = sessionFactory.openSession();
@@ -51,6 +52,7 @@ public class UserDaoImpl implements UserDao {
 
 	}
 
+	@Override
 	public void delete(User entity) {
 		// Session s = HibernateUtils.getSessionFactory().openSession();
 		Session s = sessionFactory.openSession();
@@ -65,7 +67,7 @@ public class UserDaoImpl implements UserDao {
 		}
 	}// end delete
 
-	// @SuppressWarnings("unchecked")
+	@Override
 	public User getUserById(long id) {
 		User user = null;
 		// Session s = HibernateUtils.getSessionFactory().openSession();
@@ -84,17 +86,33 @@ public class UserDaoImpl implements UserDao {
 		return user;
 	}
 
+	@Override
 	public User getUserByName(String name) {
-		// http://www.jmdoudoux.fr/java/dej/chap-hibernate.htm
-		// Query q = s.createQuery("from foo Foo as foo where foo.name=:name and
-		// foo.size=:size");
-		// q.setProperties(fooBean); // fooBean has getName() and getSize()
-		// List foos = q.list();
-		// Session s = HibernateUtils.getSessionFactory().openSession();
 		Session s = sessionFactory.openSession();
 		Transaction tx = s.beginTransaction();
 		Query q = s.createQuery("from User u where u.name_user=:name");
 		q.setString("name", name);
+		List<User> users = q.list();
+		if (users.size() == 0)
+			return null;
+		return users.get(0);
+	}
+
+	@Override
+
+	public List<User> getAllUsers() {
+		Session session = sessionFactory.openSession();
+		// return session.createCriteria(User.class).list();
+		@SuppressWarnings("unchecked")
+		List<User> ulist = session.createQuery("from User").list();
+		return ulist;
+	}
+
+	@Override
+	public User getUserByEmail(String email) {
+		Session s = sessionFactory.openSession();
+		Query q = s.createQuery("from User u where u.email_user=:email");
+		q.setString("email", email);
 		List<User> users = q.list();
 		if (users.size() == 0)
 			return null;

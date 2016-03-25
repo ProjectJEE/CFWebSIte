@@ -1,49 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+<header role="banner" id="fh5co-header">
 	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#navbar-collapsible">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#"> <img alt="logo"
-				class="img-circle" width="70" height="70" src="img/logo.png">
-			</a>
-		</div>
-		<div class="navbar-collapse collapse" id="navbar-collapsible">
-			<ul class="nav navbar-nav navbar-left">
-				<li><a href="#section1">Home&nbsp;<i class="fa fa-home"></i>
-				</a></li>
-				<li><a href="#section2">How&nbsp;<i class="fa fa-wrench"></i></a></li>
-				<li><a href="#section3">Projects&nbsp;<i
-						class="fa fa-folder"></i>
+		<!-- <div class="row"> -->
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar"><i></i></a> <a class="navbar-brand"
+					href="index"><span style="font-family: pacifico;">Bulbfunding</span></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+					<li><a href="#" data-nav-section="projects"><span>Projects</span></a></li>
+					<li><a href="#" data-nav-section="feedback"><span>Feedback</span></a></li>
+					<li><a href="#" data-nav-section="services"><span>Services</span></a></li>
+					<li><a href="#" data-nav-section="about"><span>About</span></a></li>
+					<li><a href="#" data-nav-section="contact"><span>Contact</span></a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<div class="dropdown">
+						<button class="btn btn-mine dropdown-toggle" type="button"
+							id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="true">
+							${ user.name_user} <span class="caret"></span>
+						</button>
 
-				</a></li>
-				<li><a href="#section4">Follow us</a></li>
-				<li>&nbsp;</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#" data-toggle="modal" data-target="#signupModal">Sign
-						up&nbsp;<i class="fa fa-user-plus"></i>
-				</a></li>
-				<li><a href="#" data-toggle="modal" data-target="#loginModal">Log
-						in&nbsp;<i class="fa fa-user"></i>
-				</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">${ user.getName_user() } <span
-						class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Create project</a></li>
-						<li><a href="#">Projects</a></li>
-						<li><a href="#">Settings</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#">Log out</a></li>
-					</ul></li>
-			</ul>
-		</div>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#" style="color: black;">Profile</a></li>
+							<li><a href="#" style="color: black;">Create project</a></li>
+							<li><a href="#" style="color: black;">Projects started</a></li>
+							<li role="separator" class="divider" style="color: black;"></li>
+							<li><a href="logout" style="color: red;" id="logout">Log
+									out</a></li>
+						</ul>
+					</div>
+				</ul>
+			</div>
+		</nav>
 	</div>
-</nav>
+</header>
+
+
+
+

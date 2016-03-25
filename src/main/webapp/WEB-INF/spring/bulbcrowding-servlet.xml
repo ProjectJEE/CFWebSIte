@@ -35,12 +35,11 @@
 		<property name="order" value="0" />
 	</bean>
 
-
 	<!-- Ioc hibernate -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/bulbcrowding" />
+		<property name="url" value="jdbc:mysql://localhost:3306/bulbfunding" />
 		<property name="username" value="root" />
 		<property name="password" value="1991" />
 	</bean>
@@ -49,12 +48,14 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
 	</bean>
-	
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	<bean id="userDaoImp" class="com.bulbcrowding.dao.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="projectDaoImp" class="com.bulbcrowding.dao.ProjectDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	<!-- end Ioc hibernate -->
